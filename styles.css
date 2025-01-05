@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #f0f0f0;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 20px 0;
+  }
+  
+  #game-container {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    background: #78C0E0; /* Light sky color for contrast */
+    overflow: hidden;     /* Hide cars as they exit the screen */
+    border: 2px solid #333;
+    border-radius: 8px;
+  }
+  
+  /* Each car element */
+  .car {
+    position: absolute;
+    width: 100px;
+    transition: left 0.5s linear;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Highlight the leading car with a special border or glow */
+  .car.leading {
+    outline: 3px solid gold;
+    z-index: 999; /* Bring it to the front visually */
+  }
+  
+  .car img {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
+  
+  .car span {
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+  }
+  
+  /* Controls section */
+  #controls {
+    margin-top: 20px;
+  }
+  
+  #typing-input {
+    font-size: 16px;
+    padding: 5px;
+    width: 250px;
+  }
+  
+  /* Add a simple "shake" animation for errors */
+  .shake {
+    animation: shake 0.3s;
+  }
+  
+  @keyframes shake {
+    0%   { transform: translateX(0px); }
+    20%  { transform: translateX(-5px); }
+    40%  { transform: translateX(5px); }
+    60%  { transform: translateX(-5px); }
+    80%  { transform: translateX(5px); }
+    100% { transform: translateX(0px); }
+  }
+  
+  #start-btn {
+    font-size: 16px;
+    padding: 6px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  #score-display,
+  #level-display {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  

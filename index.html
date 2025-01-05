@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Type-To-Drive</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Type-To-Drive</h1>
+  
+  <div id="game-container">
+    <!-- Cars will be dynamically added here -->
+  </div>
+  
+  <div id="controls">
+    <input 
+      type="text" 
+      id="typing-input" 
+      placeholder="Type the word here..." 
+      autofocus
+    />
+    <button id="start-btn">Start Game</button>
+  </div>
+  
+  <p id="score-display">Score: 0</p>
+  <p id="level-display">Level: 1</p>
+  
+  <!-- Error sound -->
+  <audio id="error-sound">
+    <!-- You can replace this with any short "beep" or "error" sound URL you have -->
+    <source src="https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg" type="audio/ogg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Positive reinforcement sound (car "horn and start" here) -->
+  <audio id="rev-sound">
+    <!-- Try a new link from the same library (no 404) -->
+    <source src="https://upload.wikimedia.org/wikipedia/commons/c/ca/En-uk-Hooray.ogg" type="audio/ogg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
